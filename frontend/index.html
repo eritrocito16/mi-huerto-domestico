@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Plantas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #28a745; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .btn { padding: 6px 12px; border: none; color: white; cursor: pointer; }
+        .editar { background-color: #007bff; }
+        .eliminar { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestión de Plantas</h1>
+    <button class="btn" style="background-color: #28a745;">+ Nueva Planta</button>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Cuidados</th>
+                <th>Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://via.placeholder.com/50" alt="Cactus"></td>
+                <td>Cactus</td>
+                <td>Suculenta</td>
+                <td>Riego cada 15 días, evitar exceso de agua.</td>
+                <td>Fabrizzio</td>
+                <td>
+                    <button class="btn editar">Editar</button>
+                    <button class="btn eliminar">Eliminar</button>
+                </td>
+            </tr>
+            <!-- Puedes duplicar más filas para practicar -->
+        </tbody>
+    </table>
+
+</body>
+</html>

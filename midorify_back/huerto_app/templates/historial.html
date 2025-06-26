@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial - MidoriFy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0fdf4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header, nav {
+            text-align: center;
+            background: #2f6e4e;
+            color: white;
+            padding: 15px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .historial-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2f6e4e;
+        }
+
+        .registro {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .registro:last-child {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MidoriFy 🌿</h1>
+    </header>
+    <nav>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/mis-plantas/">Mis Plantas</a>
+        <a href="/cuidados/">Cuidados</a>
+        <a href="/historial/">Historial</a>
+    </nav>
+
+    <div class="historial-container">
+        <h2>Historial de Cuidados</h2>
+
+        {% if historial %}
+            {% for h in historial %}
+                <div class="registro">
+                    <strong>{{ h.0 }}</strong><br>
+                    Acción: {{ h.1 }}<br>
+                    Comentario: {{ h.2 }}<br>
+                    Fecha: {{ h.3 }}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No hay historial de cuidados aún.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

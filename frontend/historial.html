@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial de Acciones - MidoriFy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0fdf4;
+            margin: 0;
+        }
+
+        header {
+            background-color: #2f6e4e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e1f3e8;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2f6e4e;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 5px;
+        }
+
+        nav a:hover {
+            background-color: #c2ecd1;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2f6e4e;
+            text-align: center;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d0f0dd;
+            color: #2f6e4e;
+        }
+
+        tr:hover {
+            background-color: #f0fdf4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MidoriFy 🌿</h1>
+        <p>Tu asistente de cuidado de plantas</p>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="mis_plantas.html">Mis Plantas</a>
+        <a href="cuidados.html">Cuidados Programados</a>
+        <a href="historial.html">Historial</a>
+        <a href="notificaciones.html">Notificaciones</a>
+    </nav>
+
+    <main>
+        <h2>Historial de Acciones</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Planta</th>
+                    <th>Acción</th>
+                    <th>Comentario</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los registros del historial -->
+                <tr>
+                    <td>Albahaca</td>
+                    <td>Riego</td>
+                    <td>Riego matutino</td>
+                    <td>2025-06-18 08:00:00</td>
+                </tr>
+                <tr>
+                    <td>Jade</td>
+                    <td>Poda</td>
+                    <td>Se cortaron hojas secas</td>
+                    <td>2025-06-16 10:30:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

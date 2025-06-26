@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - MidoriFy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0fdf4;
+            margin: 0;
+        }
+
+        header {
+            background-color: #2f6e4e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e1f3e8;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2f6e4e;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 5px;
+        }
+
+        nav a:hover {
+            background-color: #c2ecd1;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2f6e4e;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .panel h3 {
+            margin-top: 0;
+            color: #2f6e4e;
+        }
+
+        .resumen {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .resumen div {
+            background-color: #e1f3e8;
+            padding: 15px;
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .resumen div span {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            color: #2f6e4e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MidoriFy - Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Inicio</a>
+        <a href="mis_plantas.html">Mis Plantas</a>
+        <a href="cuidados.html">Cuidados</a>
+        <a href="historial.html">Historial</a>
+    </nav>
+
+    <main>
+        <h2>Resumen general de tu jardín</h2>
+
+        <div class="resumen">
+            <div>
+                <span>12</span>
+                Plantas Registradas
+            </div>
+            <div>
+                <span>5</span>
+                Cuidados Pendientes
+            </div>
+            <div>
+                <span>3</span>
+                Acciones Recientes
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>Próximos cuidados</h3>
+            <ul>
+                <li>🌱 Riego para *Aloe Vera* mañana</li>
+                <li>☀️ Luz directa para *Papaya* hoy</li>
+                <li>✂️ Poda de *Hierba Luisa* en 3 días</li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h3>Últimas acciones realizadas</h3>
+            <ul>
+                <li>✔️ Se regó *Romero* - 18 de junio</li>
+                <li>✔️ Se abonó *Jade* - 16 de junio</li>
+                <li>✔️ Se podó *Rosa* - 14 de junio</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

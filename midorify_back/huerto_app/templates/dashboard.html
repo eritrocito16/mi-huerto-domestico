@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - MidoriFy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0fdf4;
+            margin: 0;
+        }
+
+        header {
+            background-color: #2f6e4e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e1f3e8;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2f6e4e;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 5px;
+        }
+
+        nav a:hover {
+            background-color: #c2ecd1;
+        }
+
+        main {
+            text-align: center;
+            padding: 60px 30px;
+        }
+
+        h2 {
+            color: #2f6e4e;
+        }
+
+        .logout {
+            margin-top: 40px;
+        }
+
+        .logout a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MidoriFy 🌿</h1>
+        <p>Tu asistente de cuidado de plantas</p>
+    </header>
+
+    <nav>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/mis-plantas/">Mis Plantas</a>
+        <a href="/cuidados/">Cuidados Programados</a>
+        <a href="/historial/">Historial</a>
+        <a href="/notificaciones/">Notificaciones</a>
+    </nav>
+
+    <main>
+        <h2>¡Hola, {{ nombre }}!</h2>
+        <p>Bienvenido a tu Dashboard.</p>
+
+        <div class="logout">
+            <a href="/logout/">Cerrar sesión</a>
+        </div>
+    </main>
+</body>
+</html>
+
