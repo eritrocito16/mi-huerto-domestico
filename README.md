@@ -44,3 +44,4 @@ python manage.py migrate
 Ejecuta el servidor:
 
 python manage.py runserver LISTOO!!
+https://www.youtube.com/watch?v=KILuIyf91aA&t=4681s  video de ayuda , solo ver la primera parte para la activacion de venv! :)
