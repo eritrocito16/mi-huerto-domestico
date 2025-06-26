@@ -33,7 +33,7 @@ Crea y activa un entorno virtual:
 
 python -m venv venv
 venv\Scripts\activate  # en Windows
-Instala las dependencias:
+Instala las dependencias:(usar la terminal(nuevo))
 
 pip install -r requirements.txt
 Configura la base de datos en settings.py según tus credenciales de MySQL.
@@ -43,4 +43,4 @@ Ejecuta las migraciones:
 python manage.py migrate
 Ejecuta el servidor:
 
-python manage.py runserver
+python manage.py runserver LISTOO!!
