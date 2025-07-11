@@ -14,9 +14,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.shortcuts import redirect
+
 from django.contrib import admin
 from django.urls import path, include
-from huerto_app.views import login_view, dashboard_view, mis_plantas_view, cuidados_view, historial_view
+from huerto_app.views import login_view, dashboard_view, mis_plantas_view, cuidados_view, historial_view, registro_view, registrar_cuidado_view,confirmar_cuidado_view, notificaciones_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +27,14 @@ urlpatterns = [
     path('dashboard/', dashboard_view, name='dashboard'),
     path('mis-plantas/', mis_plantas_view, name='mis_plantas'),
     path('cuidados/', cuidados_view, name='cuidados'),
-    path('historial/', historial_view, name='historial')
+    path('historial/', historial_view, name='historial'),
+    path('registro/', registro_view, name='registro'),
+    path('notificaciones/', notificaciones_view, name='notificaciones'),
+
+    path('', lambda request: redirect('/login/')),
+    path('registrar-cuidado/', registrar_cuidado_view),
+    path('confirmar_cuidado/', confirmar_cuidado_view),
+
+
 
 ]

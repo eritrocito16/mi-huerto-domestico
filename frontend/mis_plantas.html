@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -78,7 +79,7 @@
         }
 
         .planta-lista {
-            max-width: 600px;
+            max-width: 700px;
             margin: 30px auto;
             background: white;
             padding: 20px;
@@ -87,9 +88,24 @@
         }
 
         .planta-item {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #ccc;
-            padding-bottom: 8px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .planta-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .planta-info {
+            flex: 1;
         }
     </style>
 </head>
@@ -124,8 +140,12 @@
             <h3>Plantas Registradas</h3>
             {% for planta in plantas_registradas %}
                 <div class="planta-item">
-                    <strong>{{ planta.1 }}</strong> - {{ planta.2 }}<br>
-                    <small>Cuidados: {{ planta.3 }}</small>
+                    <img src="{% static 'img/plantas/' %}{{ planta.0|slugify }}.jpg" alt="{{ planta.0 }}">
+                    <div class="planta-info">
+                        <p><strong>{{ planta.0 }}</strong></p>
+                        <p><strong>Tipo:</strong> {{ planta.1 }}</p>
+                        <p><strong>Cuidados:</strong> {{ planta.2 }}</p>
+                    </div>
                 </div>
             {% empty %}
                 <p>No has registrado ninguna planta aún.</p>
@@ -134,5 +154,3 @@
     </main>
 </body>
 </html>
-
-
